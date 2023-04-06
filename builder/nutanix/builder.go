@@ -68,7 +68,7 @@ func (b *Builder) Run(ctx context.Context, ui packersdk.Ui, hook packersdk.Hook)
 		&StepShutdown{
 			Command: b.config.ShutdownCommand,
 			Timeout: b.config.ShutdownTimeout,
-		}
+		},
 	}
 
 	b.runner = &multistep.BasicRunner{Steps: steps}
