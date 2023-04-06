@@ -98,6 +98,4 @@ func (s *stepBuildVM) Cleanup(state multistep.StateBag) {
 			ui.Message("CD disk successfully deleted")
 		}
 	}
-	
-	return
 }
