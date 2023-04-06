@@ -100,13 +100,4 @@ func (s *stepBuildVM) Cleanup(state multistep.StateBag) {
 	}
 	
 	return
-
-	err := d.Delete(vmUUID.(string))
-	if err != nil {
-		ui.Error("An error occurred while deleting the Virtual machine")
-		return
-	} else {
-		ui.Message("Virtual machine successfully deleted")
-	}
-
 }
