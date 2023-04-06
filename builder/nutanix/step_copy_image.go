@@ -59,6 +59,7 @@ func (s *stepCopyImage) Run(ctx context.Context, state multistep.StateBag) multi
 }
 
 func (s *stepCopyImage) Cleanup(state multistep.StateBag) {
+	return
 	ui := state.Get("ui").(packer.Ui)
 	d := state.Get("driver").(Driver)
 
