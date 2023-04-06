@@ -80,16 +80,6 @@ func (b *Builder) Run(ctx context.Context, ui packersdk.Ui, hook packersdk.Hook)
 	if rawErr, ok := state.GetOk("error"); ok {
 		return nil, rawErr.(error)
 	}
-
-	if imageUUID, ok := state.GetOk("image_uuid"); ok {
-		if imageUUID != nil {
-			artifact := &Artifact{
-				Name: b.config.ImageName,
-				UUID: imageUUID.([]string)[0],
-			}
-			return artifact, nil
-		}
-	}
 	return nil, nil
 }
 
