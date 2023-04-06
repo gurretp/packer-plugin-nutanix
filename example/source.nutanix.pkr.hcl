@@ -46,6 +46,7 @@ source "nutanix" "ubuntu" {
   nutanix_insecure = var.nutanix_insecure
   cluster_name     = var.nutanix_cluster
   os_type          = "Linux"
+  ubuntu_disk_image_name = "<ubuntu disk>"
 
   vm_disks {
     image_type = "DISK_IMAGE"
