@@ -11,7 +11,9 @@
 #
 name: Release
 on:
-  push:
+  push:    
+    tags:
+      - "v*"
 
 jobs:
   goreleaser:
