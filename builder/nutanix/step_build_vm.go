@@ -98,6 +98,8 @@ func (s *stepBuildVM) Cleanup(state multistep.StateBag) {
 			ui.Message("CD disk successfully deleted")
 		}
 	}
+	
+	return
 
 	err := d.Delete(vmUUID.(string))
 	if err != nil {
