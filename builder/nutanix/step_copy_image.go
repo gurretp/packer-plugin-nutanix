@@ -14,6 +14,7 @@ type stepCopyImage struct {
 }
 
 func (s *stepCopyImage) Run(ctx context.Context, state multistep.StateBag) multistep.StepAction {
+	return multistep.ActionContinue
 	ui := state.Get("ui").(packer.Ui)
 	vmUUID := state.Get("vm_uuid").(string)
 	d := state.Get("driver").(Driver)
