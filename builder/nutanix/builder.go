@@ -51,6 +51,7 @@ func (b *Builder) Run(ctx context.Context, ui packersdk.Ui, hook packersdk.Hook)
 	state.Put("driver", driver)
 	state.Put("hook", hook)
 	state.Put("ui", ui)
+	
 
 	steps := []multistep.Step{
 		&commonsteps.StepCreateCD{
